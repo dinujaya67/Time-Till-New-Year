@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  color: #f12711;
+}
+
+body {
+  font-family: "poppins", "sans-serif";
+  background-image: url("./img/background.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(2px);
+  z-index: -1;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: cursive;
+  font-size: 4rem;
+  margin: 2rem;
+  font-weight: bold;
+}
+
+.fText {
+  font-size: 22px;
+  color: rgb(50, 221, 87);
+  border-bottom: 2px solid white;
+  margin: 4px;
+}
+
+.countdown-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.big-text {
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 1rem 2rem;
+}
+
+.countdown-e {
+  text-align: center;
+}
+
+.countdown-e span {
+  font-size: 1.75rem;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+img {
+  height: 120px;
+  width: 120px;
+}
+
+.snowflake {
+  width: 100px;
+  height: 100px;
+  background-image: url("./img/snowFlake.png");
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  to {
+    transform: translate(-50%, 100vh);
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-size: auto;
+    font-size: 10px;
+    background-image: none;
+    background: linear-gradient(to right, #4286f4, #373b44);
+  }
+
+  .heading {
+    margin: 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 5px;
+  }
+
+  .fText {
+    font-size: 15px;
+  }
+
+  .big-text {
+    font-size: 3rem;
+    margin: 0.5rem 1rem;
+  }
+
+  footer {
+    position: relative;
+    background: linear-gradient(to right, #4286f4, #373b44);
+  }
+  .countdown-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .countdown-e {
+    width: 100%;
+  }
+  img {
+    display: none;
+  }
+}
